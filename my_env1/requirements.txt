@@ -1,0 +1,5 @@
+# https://www.youtube.com/watch?v=49C3Mkmhskg - for the project - End-to-End Data Analyst Project for Beginners: Walmart Sales Data Analysis with SQL & Python #09/10
+
+Pandas
+pymysql
+from sqlalchemy import create_engine
