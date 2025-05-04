@@ -1,3 +1,5 @@
+-- Walmart Project Queries
+
 SELECT * FROM walmart_db.walmart_sales;
 
 desc walmart_db.walmart_sales;
@@ -23,7 +25,7 @@ select
 from walmart_db.walmart_sales
 group by 1;
 
--- Project Question #2: Identify the highest-rated category in each branch
+-- Business Problem  Q2: Identify the highest-rated category in each branch
 -- Display the branch, category, and avg rating
 select * from 
 (
@@ -38,7 +40,7 @@ select * from
 where rank_branch = 1;
     
     
--- Q3: Identify the busiest day for each branch based on the number of transactions
+-- Business Problem Q3: Identify the busiest day for each branch based on the number of transactions
 
 select 
 	date,
@@ -58,7 +60,7 @@ group by 1,2
 ) as a
 where rank_branch = 1;
 
--- Q4: Calculate the total quantity of items sold per payment method
+-- Business Problem Q4: Calculate the total quantity of items sold per payment method
 
 select 
 	payment_method,
@@ -66,7 +68,7 @@ select
 from walmart_db.walmart_sales
 group by 1;
 
--- Q5: Determine the average, minimum, and maximum rating of categories for each city
+-- Business Problem Q5: Determine the average, minimum, and maximum rating of categories for each city
 
 select * from walmart_db.walmart_sales;
 
@@ -81,7 +83,7 @@ group by 1,2
 order by 1;
     
 
--- Q6: Calculate the total profit for each category
+-- Business Problem Q6: Calculate the total profit for each category
 
 select
 	category,
@@ -90,7 +92,7 @@ from walmart_db.walmart_sales
 group by 1
 order by 2 desc;
 
--- Q7: Determine the most common payment method for each branch
+-- Business Problem Q7: Determine the most common payment method for each branch
 
 select * from
 (
@@ -119,7 +121,7 @@ select * from cte
 where rank_common_paymnt_method = 1;
 
 
--- Q8: Categorize sales into Morning, Afternoon, and Evening shifts
+-- Business Problem Q8: Categorize sales into Morning, Afternoon, and Evening shifts
 
 select * from walmart_db.walmart_sales;
 
@@ -138,7 +140,7 @@ from walmart_db.walmart_sales
 group by 1,2
 order by 1, 3 desc;
 
--- Q9: Identify the 5 branches with the highest revenue decrease ratio from last year to current year (e.g., 2022 to 2023)
+-- Business Problem Q9: Identify the 5 branches with the highest revenue decrease ratio from last year to current year (e.g., 2022 to 2023)
 
 with revenue_2022 
 as (
